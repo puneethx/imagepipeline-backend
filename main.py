@@ -6,7 +6,7 @@ from fastapi.responses import FileResponse
 import os
 from PIL import Image
 from db_config import init_db
-from db_operations import insert_image_pair, get_image_pair, get_recent_image_pairs
+from db_operations import insert_image_pair
 
 app = FastAPI()
 
