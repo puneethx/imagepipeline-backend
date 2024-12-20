@@ -18,13 +18,13 @@ async def startup_event():
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173" # Allow requests from the specified origin (local development).
-    ],
+    allow_origins=["*"],  # Allow requests from your frontend origin
     allow_credentials=True,
-    allow_methods=["*"], # Allow all HTTP methods (GET, POST etc.) for cross-origin requests.
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
 )
+
+
 
 # Define the directory for uploaded files, creating it if it doesn't exist.
 UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "uploads")
